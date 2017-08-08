@@ -14,7 +14,8 @@ Result and history looks like : ```{CURRENCY_IN} {amount} -> {result} {CURRENCY_
 
 To setup apache, setup a virtual host to point to the public/ directory of the project and you should be ready to go! It should look something like below:
 
-<VirtualHost *:80>
+```
+apache<VirtualHost *:80>
     ServerName currencyconverter
     DocumentRoot /path/to/currencyconverter/public
     <Directory /path/to/currencyconverter/public>
@@ -24,3 +25,4 @@ To setup apache, setup a virtual host to point to the public/ directory of the p
         Allow from all
     </Directory>
 </VirtualHost>
+```
