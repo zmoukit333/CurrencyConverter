@@ -1,0 +1,47 @@
+<?php 
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('Main');
+
+echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+    <?php echo $this->headMeta(); ?> 
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/assets/css/main.css'); ?> 
+	
+	<script type="text/javascript"> var baseUrl = '<?php echo $this->baseUrl() ;?>'; </script> 
+    
+	<!-- ================== BEGIN CSS FILES ================== -->
+	<link href="<?php echo  $this->baseUrl()?>/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- ================== END CSS FILES ================== -->
+
+</head>
+
+ <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1><?php echo $this->escape($this->title); ?></h1>
+		<?php echo $this->layout()->content; ?>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="<?php echo  $this->baseUrl()?>/assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo  $this->baseUrl()?>/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="<?php echo  $this->baseUrl()?>/assets/js/currency.js"></script>
+  </body>
+
+
+</html>
