@@ -39,3 +39,12 @@ CREATE DATABASE currency
 
 2 - Import data/currency.sql file.
 
+## application.ini
+
+Please change the usename & password in application/configs/application.ini
+
+```
+resources.db.params.username = YOUR_USERNAME
+resources.db.params.password = YOUR_PASSWORD
+```
+
