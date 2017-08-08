@@ -15,7 +15,7 @@ Result and history looks like : ```{CURRENCY_IN} {amount} -> {result} {CURRENCY_
 To setup apache, setup a virtual host to point to the public/ directory of the project and you should be ready to go! It should look something like below:
 
 ```
-apache<VirtualHost *:80>
+<VirtualHost *:80>
     ServerName currencyconverter
     DocumentRoot /path/to/currencyconverter/public
     <Directory /path/to/currencyconverter/public>
@@ -26,3 +26,16 @@ apache<VirtualHost *:80>
     </Directory>
 </VirtualHost>
 ```
+
+## Database
+
+We will also need to store our conversations history into a database. We will only need one table.
+
+1 - Please create a new Database in your Mysql Server :
+
+```
+CREATE DATABASE currency
+```
+
+2 - Import data/currency.sql file.
+
